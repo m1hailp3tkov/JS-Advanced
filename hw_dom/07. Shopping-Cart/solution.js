@@ -15,8 +15,8 @@ function solve()
    {
       let productDiv = e.target.parentNode.parentNode;
 
-      let productName = productDiv.getElementsByClassName('.product-title')[0].innerHtml;
-      let productCost = productDiv.getElementsByClassName('.product-line-price')[0].innerHtml;
+      let productName = productDiv.getElementsByClassName('product-title')[0].textContent;
+      let productCost = productDiv.getElementsByClassName('product-line-price')[0].textContent;
 
       if(!uniqueProducts.includes(productName)) 
       {
@@ -29,10 +29,9 @@ function solve()
 
    function checkout()
    {
-      totalPrice = Math.round(totalPrice * 100) / 100;
       let list = uniqueProducts.join(', '); 
 
-      textArea.textContent += `You bought ${list} for ${totalPrice}.`;
+      textArea.textContent += `You bought ${list} for ${totalPrice.toFixed(2)}.`;
 
       addButtons.map(x => x.disabled = true);
       checkoutButton.disabled = true;
