@@ -17,9 +17,8 @@ function attachEventsListeners() {
             let hours = days*24;
             let minutes = hours*60;
             let seconds = minutes*60;
+
             [daysField.value, hoursField.value, minutesField.value, secondsField.value] = [days,hours,minutes,seconds];
-            console.log([daysField.value, hoursField.value, minutesField.value, secondsField.value]);
-            console.log([days,hours,minutes,seconds]);
         },
         fromHours: function ()
         {
@@ -27,6 +26,7 @@ function attachEventsListeners() {
             let days = hours/24;
             let minutes = hours*60;
             let seconds = minutes*60;
+            
             [daysField.value, hoursField.value, minutesField.value, secondsField.value] = [days,hours,minutes,seconds];
         },
         fromMinutes: function()
@@ -35,6 +35,7 @@ function attachEventsListeners() {
             let hours = minutes/60;
             let days = hours/24;
             let seconds = minutes*60;
+
             [daysField.value, hoursField.value, minutesField.value, secondsField.value] = [days,hours,minutes,seconds];
         },
         fromSeconds: function()
@@ -43,6 +44,7 @@ function attachEventsListeners() {
             let minutes = seconds/60;
             let hours = minutes/60;
             let days = hours/24;
+            
             [daysField.value, hoursField.value, minutesField.value, secondsField.value] = [days,hours,minutes,seconds];
         }
     }
